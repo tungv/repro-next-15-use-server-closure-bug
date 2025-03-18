@@ -6,6 +6,8 @@ export default function Home() {
         action={async function submit() {
           "use server";
           console.log(someValueFromRender);
+
+          // without the follow statement, the submit button won't throw an error
           [1, 2, 3].map((x) => x + 1);
         }}
       >
